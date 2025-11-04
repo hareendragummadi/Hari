@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>CSS: External vs Internal vs Inline</title>
+      <style>
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin: 40px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .internal {
+      background-color: #fff8e1;
+      padding: 10px;
+      border-left: 5px solid goldenrod;
+      color: #b8860b;
+    }
+
+    .specificity {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border: 2px dashed #ccc;
+    }
+
+    .showdown {
+      color: green; /* internal CSS tries to make it green */
+    }
+  </style>
+</head>
+<body>
+    <h1>
+        <b>CSS: External vs Internal vs Inline</b>
+    </h1>
+    <p>Open DevTools and inspect each box to see where the styles come from.</p>
+    <hr>
+    <h2><b>External CSS</b></h2>
+    <p>Styled by <strong>Internal</strong> CSS from styles.css</p>
+    <hr>
+    <h2><b>Internal CSS</b></h2>
+    <div style="background-color: orange;">
+    <p class="inline">Styled by <strong>internal</strong> CSS in the <code>&lt;style&gt;</code> tag of this page.</p></div>
+    <hr>
+    <h2><b>Inline CSS</b></h2>
+    <div style="background-color: lightgreen;">
+        <p>Styled by <strong>inline</strong> CSS via the <code>style=""</code> attribute on this element.</p></div>
+        <hr>
+        <h2><b>Specificity Showdown (Who wins?)</b></h2>
+        <p>The same element is targeted by external, internal, and inline rules:</p>
+        <ul>
+            <li>External sets it to <strong>blue</strong></li>
+            <li>Internal tries to make it <strong>green</strong></li>
+            <li>Inline forces it to <strong>red</strong></li> 
+        </ul>
+
+</body>
+</html>
